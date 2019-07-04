@@ -1,0 +1,53 @@
+.cb-c-header {
+    width: calc(100% - 32px);
+    margin: 0 auto;
+    padding: 8px 0;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    border-bottom: 1px solid color('grey', dark);
+
+    &__logo {
+        font-size: fz(3);
+    }
+
+    &__desc {
+        font-size: fz(6);
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    &__menu-icon {
+        display: none;
+    }
+
+    @media only screen and (max-width: 768px) {
+        flex-wrap: wrap;
+
+        &__logo i {
+            display: block;
+        }
+
+        nav {
+            display: none;
+            width: 100%;
+            margin-top: 16px;
+            
+            &.cb-is-nav-visible {
+                display: block;
+            }
+        }
+
+        &__menu-icon {
+            display: block;
+            color: color('grey', dark) !important;
+            font-size: 32px;
+        }
+    }
+}

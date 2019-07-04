@@ -1,0 +1,72 @@
+/**
+* Media
+* - square img
+* - rectangular img
+* - img w/t caption
+* - img w/t icon
+*/
+
+.cb-u-media-- {
+    &img, &img-square {
+        margin: 0;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        img {
+            object-fit: cover;
+            max-height: 100%;
+        }
+
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+
+            color: color('grey');
+            background-color: transparentize(color('white', light), 0.3);
+
+            padding: 8px 6px 8px 16px;
+            opacity: 0;
+            font-size: fz(7);
+            transition: opacity .3s ease-in-out;
+        }
+
+        &:hover > figcaption {
+            opacity: 1;
+        }
+
+        figcaption.cb-u-media--img-icon {
+            background-color: color('white', light);
+            border-radius: 50%;
+            opacity: 1;
+            left: unset;
+            padding: 0;
+            height: 25%;
+            width: 25%;
+
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+            transform: translate(25%, 25%);
+
+            i {
+                font-size: 36px;
+            }
+        }
+    }
+
+    &img-square {
+        width: 300px;
+        height: 300px;
+
+        img{width: 100%;}
+    }
+
+    &img .cb-u-radius--ellipse ~ figcaption {
+        transform: none !important;
+    }
+}

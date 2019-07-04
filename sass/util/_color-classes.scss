@@ -1,0 +1,31 @@
+/* Color classes */
+
+@each $color, $map in $colors {
+    .cb-u-color--#{$color} {
+        background-color: color($color, base);
+    }
+    
+    .cb-u-color--#{$color}-text {
+        color: color($color, base);
+    }
+
+    @if map-has-key($map, light) {
+        .cb-u-color--#{$color}-light {
+            background-color: color($color, light);
+        }
+
+        .cb-u-color--#{$color}-light-text {
+            color: color($color, light);
+        }
+    }
+
+    @if map-has-key($map, dark ) {
+        .cb-u-color--#{$color}-dark {
+            background-color: color($color, dark);
+        }
+
+        .cb-u-color--#{$color}-dark-text {
+            color: color($color, dark);
+        }
+    }
+}

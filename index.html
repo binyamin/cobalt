@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cobalt | A Design System by b3u</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/cobalt.min.css">
+    <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
+</head>
+<body>
+    <header class="cb-c-header">
+        <span class="cb-c-header__logo">Cobalt
+            <i class="cb-c-header__desc">A Design System by @b3u</i>
+        </span>
+        <a href="#" class="cb-c-header__menu-icon">
+            <i class="bx bx-menu"></i>
+        </a>    
+        <nav><!-- class="cb-is-nav-visible" -->
+            <a href="#util">Utilities</a>
+            <a href="#comp">Components</a>
+            <a href="#">Layout</a>
+            <a href="#">Misc</a>
+        </nav>
+    </header>
+    
+    <!-- Util -->
+    <section id="util">
+        <h2>Utilities</h2>
+        
+        <h3>Color Palette</h3>
+
+        <div class="cb-u-radius--ellipse cb-u-color--primary cb-u-shadow--sm" style="width: 50px; height: 50px"></div>
+        <div class="cb-u-radius--ellipse cb-u-color--secondary cb-u-shadow--sm" style="width: 50px; height: 50px"></div>
+        <div class="cb-u-radius--ellipse cb-u-color--success cb-u-shadow--sm" style="width: 50px; height: 50px"></div>
+        <div class="cb-u-radius--ellipse cb-u-color--warning cb-u-shadow--sm" style="width: 50px; height: 50px"></div>
+        <div class="cb-u-radius--ellipse cb-u-color--failure cb-u-shadow--sm" style="width: 50px; height: 50px"></div>
+
+        <h3>Type Scale</h3>
+
+        <h1>A Heading goes here</h1>
+        <h2>A Heading goes here</h2>
+        <h3>A Heading goes here</h3>
+        <h4>A Heading goes here</h4>
+        <h5>A Heading goes here</h5>
+        <h6>A Heading goes here</h6>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, accusamus. Amet reprehenderit quidem ea! Accusamus, excepturi alias? Mollitia possimus commodi similique fugiat, error voluptatem corporis, provident inventore nesciunt itaque maiores!</p>
+        <a href="#">Link</a>
+
+        <h3>Media</h3>      
+        <figure class="cb-u-media--img"><img src="https://unsplash.it/300/150" alt="Image"></figure>
+        <figure class="cb-u-media--img-square"><img src="https://unsplash.it/300/400" alt="Image"></figure>
+        <figure class="cb-u-media--img"><img src="https://unsplash.it/333/333" alt="Image"><figcaption>Some text here</figcaption></figure>
+        <figure class="cb-u-media--img"><img src="https://unsplash.it/455/455" alt="Image" width="200" height="200"><figcaption class="cb-u-media--img-icon"><i class="bx bxs-user cb-u-color--primary-text"></i></figcaption></figure>
+        <figure class="cb-u-media--img"><img src="https://unsplash.it/450/450" class="cb-u-radius--ellipse" alt="Image" width="200" height="200"><figcaption class="cb-u-media--img-icon"><i class="bx bxs-star cb-u-color--warning-text"></i></figcaption></figure>
+    </section>
+    <section id="comp">
+        <h2>Components</h2>
+
+        <h3>Buttons</h3>
+        <button class="cb-c-btn--primary">Primary</button>
+        <button class="cb-c-btn--secondary">Secondary</button>
+        <button class="cb-c-btn--failure">Failure</button>
+        <button class="cb-c-btn--warning">Warning</button>
+        <button class="cb-c-btn--success">Success</button>
+        <button class="cb-c-btn--primary" disabled>Button</button>
+        <button class="cb-u-radius--ellipse"><i class="bx bx-plus"></i></button>
+
+        <h3>Input Fields</h3>
+        <form class="cb-u-shadow--sm" style="width:50%;">
+            <p class="cb-c-input-wrapper">
+                <input id="fullname" type="text" pattern="\w+" required>
+                <label for="fullname">Full Name</label>
+            </p>
+            <p class="cb-c-input-wrapper">
+                <input id="username" type="text" required>
+                <i class="bx bxs-user-circle cb-c-input__icon"></i>
+                <label for="username">Username</label>
+            </p>
+            <p class="cb-c-input-wrapper">
+                <input id="password" type="password" required minlength="8">
+                <label for="password">Password</label>
+            </p>
+            <p class="cb-c-input-wrapper">
+                <label for="checkbox">Checkbox</label>
+                <input id="checkbox" type="checkbox">
+            </p>
+            <p class="cb-c-input-wrapper">
+                <label for="toggle">Toggle</label>
+                <input id="toggle" type="checkbox" class="cb-c-input--toggle">
+            </p>
+            <p class="cb-c-input-wrapper">
+                <label for="select">Select</label>
+                <select name="select" id="select">
+                    <option value="1">Option One</option>
+                    <option value="2">Option Two</option>
+                    <option value="3">Option Three</option>
+                </select>
+            </p>
+            <p class="cb-c-input-wrapper">
+                <label for="selectMultiple">Multiple Select</label>
+                <select name="selectMultiple" id="selectMultiple" multiple>
+                    <option value="1">Option One</option>
+                    <option value="2">Option Two</option>
+                    <option value="3">Option Three</option>
+                </select>
+            </p>
+            <button type="submit">Submit</button>
+        </form>
+        <h3>Tables</h3>
+    </section>
+</body>
+</html>

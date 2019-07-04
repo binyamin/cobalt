@@ -1,0 +1,46 @@
+$primary: (
+    "extra-light": #F1FBFE,
+    "light": #74D3F2,
+    "base": #56CCF2,
+    "dark": #1f90b5
+);
+
+$secondary: (base: #BB6BD9);
+
+$success: (
+    light: #8EF6D0,
+    base: #56F2B9,
+    dark: #11DF94
+);
+$warning: (
+    light: #F6EC8E,
+    base: #F2E256,
+    dark: #DFCA11
+);
+$failure: (
+    light: #F283A3,
+    base: #F25684,
+    dark: #CB1047
+);
+
+$grey: (
+    light: #adadad,
+    base: #606060,
+    dark: #313131
+);
+
+$white: (
+    light: #ffffff,
+    base:#fcfcfc,
+    dark: #f5f5f5
+);
+
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "warning": $warning,
+    "failure": $failure,
+    "grey": $grey,
+    "white": $white
+) !default;

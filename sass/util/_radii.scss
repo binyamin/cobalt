@@ -1,0 +1,8 @@
+// Border radii
+.cb-u-radius--{
+    &sm {@include radius(sm)}
+    &md {@include radius(md)}
+    &lg {@include radius(lg)}
+    &ellipse {@include radius(ellipse)}
+}
+

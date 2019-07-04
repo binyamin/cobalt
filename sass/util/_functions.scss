@@ -1,0 +1,15 @@
+@function fz($size) {
+    @return #{nth($text-scale, $size)}px;
+}
+
+/* Function from 'https://github.com/Dogfalo/materialize/blob/v1-dev/sass/components/_color-variables.scss'*/
+@function color($color, $type: base) {
+    @if map-has-key($colors, $color) {
+      $curr_color: map-get($colors, $color);
+      @if map-has-key($curr_color, $type) {
+        @return map-get($curr_color, $type);
+      }
+    }
+    @warn "Unknown `#{$color}` - `#{$type}` in $colors.";
+    @return null;
+}

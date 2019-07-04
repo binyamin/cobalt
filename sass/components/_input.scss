@@ -1,0 +1,141 @@
+/* =========
+    Inputs
+============ */
+
+.cb-c-input-wrapper {
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    input[type=password],
+    input[type=text],
+    input[type=number],
+    input[type=tel],
+    input[type=url],
+    input[type=email] {
+        border: none;
+        border-bottom: 1px solid color('grey', dark);
+        outline: none;
+        transition: border .3s ease-in-out,
+                    color .3s ease-in-out;
+    
+        &:focus {@include field-color(color(primary, dark))}
+        &:valid ~ label {
+            font-size: fz(7);
+            bottom: 100%;
+            left: 4px;
+        }
+
+        &.cb-is-valid-input {@include field-color(color(success, dark))}
+        &.cb-is-not-valid-input {@include field-color(color(failure, dark))}
+
+        ~ label {
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            color: color('grey', light);
+            pointer-events: none;
+            transition: bottom .3s ease-in-out,
+                        font-size .3s ease-in-out,
+                        left .3s ease-in-out;
+        }
+
+        ~ .cb-c-input__icon {
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+            transition: color .3s ease-in-out;
+        }
+    }
+
+    // Checkbox
+    input[type=checkbox]:not(.cb-c-input--toggle) {
+        appearance: none;
+        outline: none;
+        margin-left: 8px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 16px;
+            height: 16px;
+            border: 1px solid color('grey');
+            border-radius: 2px;
+        }
+
+        &:hover::before {
+            border-color: color(success, dark)
+        }
+
+        &:checked::before {
+            content: "✔";
+            color: color('success', dark);
+            font-size: fz(7);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    input[type=checkbox].cb-c-input--toggle {
+        box-sizing: initial;
+        appearance: none;
+        outline: none;
+        margin-left: 8px;
+        
+        background-color: color('grey', light);
+        width: 40px;
+        height: 16px;
+        border-radius: 10px;
+        border: 2px solid color('grey', light);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            box-shadow: 0 0 0 1px color(success, dark);
+        }
+
+        &::before {
+            content: "";
+            background-color: white;
+            height: 16px;
+            width: 16px;
+            display: block;
+            border-radius: 8px;
+
+            position: absolute;
+            right: 16px + 2px + 8px;
+            bottom: 2px;
+            transition: right .3s ease-in-out;
+        }
+
+        &:checked::before {
+            right: 2px
+        }
+        &:checked{
+            background-color: color(success, dark);
+            border-color: color(success, dark);
+        }
+
+        &::after {
+            content: "No";
+            font-size: fz(7);
+            color: color('white');
+            
+            position: absolute;
+            right: 3px;
+            transition: right .3s ease-in-out;
+        }
+
+        &:checked::after {
+            content: "Yes";
+            font-size: fz(7);
+            color: color('white');
+            right: 19px;
+        }
+    }
+}

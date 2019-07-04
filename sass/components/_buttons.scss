@@ -1,0 +1,68 @@
+.cb-c-btn-- {
+    &primary {
+        background-color: color(primary);
+        color: color('white');
+
+        &:hover {background-color: color(primary, light)}
+        &:active {background-color: color(primary, dark)}
+    }
+
+    &secondary {
+        background-color: color('white');
+        color: color('grey', light);
+
+        &:hover {background-color: color('white', light)}
+        &:active {background-color: color('white', dark)}
+    }
+
+    &failure {
+        background-color: color(failure);
+        color: color('white');
+        &:hover {background-color: color(failure, light)}
+        &:active {background-color: color(failure, dark)}
+    }
+
+    &warning {
+        background-color: color(warning);
+        color: color('white');
+        &:hover {background-color: color(warning, light)}
+        &:active {background-color: color(warning, dark)}
+    }
+
+    &success {
+        background-color: color(success);
+        color: color('white');
+        &:hover {background-color: color(success, light)}
+        &:active {background-color: color(success, dark)}
+    }
+}
+
+button {
+    border: none;
+    padding: 6px 16px;
+    outline: none;
+    font-size: fz(6);
+    @include radius(sm);
+    @include shadow(sm);
+
+    background-color: color(primary);
+    color: color('white');
+
+    &:hover {background-color: color(primary, light)}
+    &:active {background-color: color(primary, dark)}
+    
+    &.cb-u-radius--ellipse {
+        padding: 6px;
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+button:disabled {
+    background-color: color('grey', light);
+    color: color('white');
+
+    &:hover {background-color: color('grey', light)}
+}

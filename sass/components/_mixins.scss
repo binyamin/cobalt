@@ -1,0 +1,14 @@
+@mixin field-color($color) {
+    border-bottom-color: $color;
+
+    ~ label {
+        font-size: fz(7);
+        bottom: 100%;
+        left: 4px;
+        color: $color;
+    }
+
+    ~ .cb-c-input__icon {
+        color: $color;
+    }
+}

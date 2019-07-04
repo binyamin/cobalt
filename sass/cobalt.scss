@@ -1,0 +1,30 @@
+/**
+*  Cobalt
+*  MIT License
+*  (c) 2019 Binyamin Green
+*/
+
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+
+@import 'normalize';
+@import 'global';
+
+@import 'util/util';
+@import 'layout/layout';
+@import 'components/components';
+
+body {
+    color: color('grey', dark);
+}
+
+p {
+    font-size: fz(6) !important;
+}
+
+a {
+    color: color(primary, light);
+
+    &:hover {
+        color: color(primary, dark);
+    }
+}
