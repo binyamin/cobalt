@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cobalt | A Design System by b3u</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/cobalt.min.css">
+    <link rel="stylesheet" href="dist/cobalt.min.css">
     <link rel="stylesheet" href="./node_modules/boxicons/css/boxicons.min.css">
+    <script defer src="dist/cobalt.min.js"></script>
 </head>
 <body>
     <header class="cb-c-header">
@@ -25,7 +26,7 @@
         </nav>
     </header>
     
-    <!-- Util -->
+    <!-- Utilities -->
     <section id="util">
         <h2>Utilities</h2>
         
@@ -55,17 +56,21 @@
         <figure class="cb-u-media--img"><img src="https://unsplash.it/455/455" alt="Image" width="200" height="200"><figcaption class="cb-u-media--img-icon"><i class="bx bxs-user cb-u-color--primary-text"></i></figcaption></figure>
         <figure class="cb-u-media--img"><img src="https://unsplash.it/450/450" class="cb-u-radius--ellipse" alt="Image" width="200" height="200"><figcaption class="cb-u-media--img-icon"><i class="bx bxs-star cb-u-color--warning-text"></i></figcaption></figure>
     </section>
+    
+    <!-- Components -->
     <section id="comp">
         <h2>Components</h2>
 
         <h3>Buttons</h3>
-        <button class="cb-c-btn--primary">Primary</button>
-        <button class="cb-c-btn--secondary">Secondary</button>
-        <button class="cb-c-btn--failure">Failure</button>
-        <button class="cb-c-btn--warning">Warning</button>
-        <button class="cb-c-btn--success">Success</button>
-        <button class="cb-c-btn--primary" disabled>Button</button>
-        <button class="cb-u-radius--ellipse"><i class="bx bx-plus"></i></button>
+        <div>
+            <button class="cb-c-btn--primary">Primary</button>
+            <button class="cb-c-btn--secondary">Secondary</button>
+            <button class="cb-c-btn--failure">Failure</button>
+            <button class="cb-c-btn--warning">Warning</button>
+            <button class="cb-c-btn--success">Success</button>
+            <button class="cb-c-btn--primary" disabled>Button</button>
+            <button class="cb-u-radius--ellipse"><i class="bx bx-plus"></i></button>        
+        </div>
 
         <h3>Input Fields</h3>
         <form class="cb-u-shadow--sm" style="width:50%;">
@@ -77,6 +82,10 @@
                 <input id="username" type="text" required>
                 <i class="bx bxs-user-circle cb-c-input__icon"></i>
                 <label for="username">Username</label>
+            </p>
+            <p class="cb-c-input-wrapper">
+                <input id="email" type="email" required>
+                <label for="email">Email</label>
             </p>
             <p class="cb-c-input-wrapper">
                 <input id="password" type="password" required minlength="8">
@@ -108,7 +117,40 @@
             </p>
             <button type="submit">Submit</button>
         </form>
+
         <h3>Tables</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://randomuser.me/api/portraits/women/7.jpg" width="45px" height="45px" alt="" class="cb-u-radius--ellipse"></td>
+                    <td>John Crawford</td>
+                    <td>64</td>
+                    <td>johnc25@examp.ly</td>
+                </tr>
+                <tr>
+                    <td><img width="45px" src="https://randomuser.me/api/portraits/men/31.jpg" width="45px" height="45px" alt="" class="cb-u-radius--ellipse"></td>
+                    <td>Bruce Wayne</td>
+                    <td>36</td>
+                    <td>bwayne@wayneenterprises.com</td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://randomuser.me/api/portraits/men/3.jpg" width="45px" height="45px" alt="" class="cb-u-radius--ellipse">
+                    </td>
+                    <td>Clark Kent</td>
+                    <td>47</td>
+                    <td>clark.kent@dailyplanet.info</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 </body>
 </html>

@@ -2,11 +2,11 @@
   "name": "cobalt",
   "version": "0.1.0",
   "description": "A Design System by b3u",
-  "style": "css/cobalt.min.css",
+  "style": "dist/cobalt.min.css",
   "sass": "sass/cobalt.scss",
-  "main": "css/cobalt.min.css",
+  "main": "dist/cobalt.min.js",
   "scripts": {
-    "pack": "gulp css",
+    "pack": "gulp pack",
     "dev": "gulp watch"
   },
   "keywords": [
@@ -17,19 +17,25 @@
   "author": "Binyamin Aron Green",
   "license": "MIT",
   "dependencies": {
-    "boxicons": "^2.0.2"
+    "boxicons": "^2.0.2",
+    "materialize-css": "^1.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
-    "materializecss": "^1.0.11"
+    "gulp-uglify": "^3.0.2"
   },
   "files": [
-    "css",
+    "js",
+    "dist",
     "sass",
     "license.md",
     "readme.md"
