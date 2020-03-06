@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A Design System by b3u",
   "style": "css/cobalt.min.css",
-  "sass": "sass/cobalt.scss",
+  "sass": "sass/style.scss",
   "scripts": {
-    "start:css": "gulp pack",
+    "compile": "gulp pack",
+    "prestart": "npm run compile",
     "start": "gulp watch"
   },
   "keywords": [
