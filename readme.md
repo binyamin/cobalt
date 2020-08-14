@@ -1,5 +1,5 @@
 # Cobalt
-A Design System by @b3u
+A Design System
 
 ## All
 
